@@ -1,5 +1,5 @@
 <div align="center">
-<h1 align="center">Hi <img width="35" src="https://github.com/1999AZZAR/1999AZZAR/blob/main/resources/img/waving.gif">, I'm Erkan</h1>
+<h1 align="center">Hi<img width="35" src="https://github.com/1999AZZAR/1999AZZAR/blob/main/resources/img/waving.gif">, I'm Erkan</h1>
 <h4 align="center">I work as a full stack freelancer at my own brand, <a href="https://www.flabex.com/en" target="_blank">Flabex.</a> for more</h4>
 </div>
 
