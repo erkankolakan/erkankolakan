@@ -1,516 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erkan Kolakan - GitHub Profile</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
-            color: #fff;
-            overflow-x: hidden;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-        }
-        
-        .floating-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-        
-        .particle {
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: linear-gradient(45deg, #00f5ff, #ff00ff);
-            border-radius: 50%;
-            animation: float 8s infinite ease-in-out;
-            opacity: 0.6;
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            33% { transform: translateY(-20px) rotate(120deg); }
-            66% { transform: translateY(10px) rotate(240deg); }
-        }
-        
-        .hero-section {
-            text-align: center;
-            padding: 4rem 0;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .profile-container {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        
-        .profile-glow {
-            position: absolute;
-            top: -20px;
-            left: -20px;
-            right: -20px;
-            bottom: -20px;
-            background: conic-gradient(from 0deg, #ff006e, #8338ec, #3a86ff, #06ffa5, #ffbe0b, #fb5607, #ff006e);
-            border-radius: 50%;
-            animation: rotate 3s linear infinite;
-            z-index: 1;
-        }
-        
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-        
-        .profile-image {
-            position: relative;
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            font-weight: bold;
-            color: #fff;
-            z-index: 2;
-            margin: 20px;
-        }
-        
-        .name-title {
-            margin-bottom: 1rem;
-        }
-        
-        .name {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #00f5ff 0%, #ff00ff 50%, #ffbe0b 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-        
-        @keyframes glow {
-            from { filter: drop-shadow(0 0 10px rgba(0, 245, 255, 0.3)); }
-            to { filter: drop-shadow(0 0 20px rgba(255, 0, 255, 0.5)); }
-        }
-        
-        .subtitle {
-            font-size: 1.3rem;
-            color: #a0a9c0;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto 3rem;
-        }
-        
-        .brand-link {
-            color: #00f5ff;
-            text-decoration: none;
-            font-weight: 600;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .brand-link:hover {
-            color: #ff00ff;
-            transform: translateY(-2px);
-        }
-        
-        .brand-link::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(90deg, #00f5ff, #ff00ff);
-            transition: width 0.3s ease;
-        }
-        
-        .brand-link:hover::after {
-            width: 100%;
-        }
-        
-        .contact-section {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 2rem;
-            margin: 3rem 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
-            transform: rotate(45deg);
-            animation: shimmer 3s linear infinite;
-        }
-        
-        @keyframes shimmer {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
-        }
-        
-        .contact-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-header:hover {
-            transform: scale(1.02);
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-            margin-right: 0.5rem;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-        }
-        
-        .contact-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #fff;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 15px;
-            text-decoration: none;
-            color: #fff;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .contact-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .contact-item:hover::before {
-            left: 100%;
-        }
-        
-        .contact-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 245, 255, 0.3);
-            background: rgba(255, 255, 255, 0.12);
-        }
-        
-        .contact-item.linkedin:hover {
-            box-shadow: 0 10px 30px rgba(0, 119, 181, 0.4);
-        }
-        
-        .contact-item.gmail:hover {
-            box-shadow: 0 10px 30px rgba(234, 67, 53, 0.4);
-        }
-        
-        .contact-item.instagram:hover {
-            box-shadow: 0 10px 30px rgba(228, 64, 95, 0.4);
-        }
-        
-        .contact-item img {
-            height: 30px;
-            margin-right: 0.5rem;
-            filter: brightness(1.2);
-        }
-        
-        .stats-section {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-        
-        .stat-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.08);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #00f5ff, #ff00ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            color: #a0a9c0;
-            margin-top: 0.5rem;
-        }
-        
-        .footer {
-            text-align: center;
-            padding: 3rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 4rem;
-        }
-        
-        .footer-content {
-            color: #a0a9c0;
-            font-size: 0.9rem;
-        }
-        
-        .footer-link {
-            color: #00f5ff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .footer-link:hover {
-            color: #ff00ff;
-        }
-        
-        @media (max-width: 768px) {
-            .name {
-                font-size: 2.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.1rem;
-                padding: 0 1rem;
-            }
-            
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="floating-particles" id="particles"></div>
-    
-    <div class="container">
-        <div class="hero-section">
-            <div class="profile-container">
-                <div class="profile-glow"></div>
-                <div class="profile-image">E</div>
-            </div>
-            
-            <div class="name-title">
-                <h1 class="name">Hi, I'm Erkan</h1>
-                <p class="subtitle">
-                    Full Stack Freelancer & Digital Innovator<br>
-                    Building exceptional experiences at <a href="https://www.flabex.com/en" target="_blank" class="brand-link">Flabex</a>
-                </p>
-            </div>
-        </div>
-        
-        <div class="stats-section">
-            <div class="stat-card">
-                <div class="stat-number">5+</div>
-                <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">100+</div>
-                <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Available</div>
-            </div>
-        </div>
-        
-        <div class="contact-section">
-            <div class="contact-header" onclick="toggleContact()">
-                <span class="contact-icon">📞</span>
-                <h2 class="contact-title">Let's Connect</h2>
-            </div>
-            
-            <div class="contact-grid" id="contactGrid">
-                <a href="https://www.linkedin.com/in/erkan-kolakan-03138b1a3/" target="_blank" class="contact-item linkedin">
-                    <img src="https://img.shields.io/badge/linkedin-%231DA1F2.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
-                    <span>LinkedIn</span>
-                </a>
-                
-                <a href="mailto:erkankolakan@gmail.com" target="_blank" class="contact-item gmail">
-                    <img src="https://img.shields.io/badge/gmail-EA4335.svg?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" />
-                    <span>Email</span>
-                </a>
-                
-                <a href="https://instagram.com/erkankolakans" target="_blank" class="contact-item instagram">
-                    <img src="https://img.shields.io/badge/instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram" />
-                    <span>Instagram</span>
-                </a>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <div class="footer-content">
-                Crafted with ❤️ by <a href="https://github.com/erkankolakan" target="_blank" class="footer-link">erkankolakan</a><br>
-                Last Updated: December 2024
-            </div>
-        </div>
-    </div>
+# 👋 Hi there, I'm **Erkan Kolakan**
 
-    <script>
-        // Create floating particles
-        function createParticles() {
-            const particlesContainer = document.getElementById('particles');
-            const numParticles = 50;
-            
-            for (let i = 0; i < numParticles; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 8 + 's';
-                particle.style.animationDuration = (Math.random() * 6 + 4) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-        
-        // Initialize particles
-        createParticles();
-        
-        // Smooth scroll and animation on load
-        window.addEventListener('load', () => {
-            document.body.style.opacity = '0';
-            document.body.style.transform = 'translateY(30px)';
-            document.body.style.transition = 'all 1s ease-out';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-                document.body.style.transform = 'translateY(0)';
-            }, 100);
-        });
-        
-        // Add mouse move effect
-        document.addEventListener('mousemove', (e) => {
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-            
-            document.querySelectorAll('.particle').forEach((particle, index) => {
-                const speed = (index + 1) * 0.1;
-                const x = mouseX * speed * 50;
-                const y = mouseY * speed * 50;
-                particle.style.transform = `translate(${x}px, ${y}px)`;
-            });
-        });
-        
-        // Add intersection observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-        
-        // Observe elements for animation
-        document.querySelectorAll('.stat-card, .contact-section').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.8s ease-out';
-            observer.observe(el);
-        });
-        
-        // Enhanced contact toggle
-        function toggleContact() {
-            const grid = document.getElementById('contactGrid');
-            const isVisible = grid.style.maxHeight && grid.style.maxHeight !== '0px';
-            
-            if (isVisible) {
-                grid.style.maxHeight = '0px';
-                grid.style.opacity = '0';
-                grid.style.transform = 'translateY(-20px)';
-            } else {
-                grid.style.maxHeight = '300px';
-                grid.style.opacity = '1';
-                grid.style.transform = 'translateY(0)';
-            }
-        }
-        
-        // Set initial state
-        document.addEventListener('DOMContentLoaded', () => {
-            const grid = document.getElementById('contactGrid');
-            grid.style.maxHeight = '300px';
-            grid.style.transition = 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
-        });
-    </script>
-</body>
-</html>
+<div align="center">
+  
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&width=600&lines=Full+Stack+Developer;Freelance+Expert;Digital+Innovator;Building+Amazing+Experiences)](https://git.io/typing-svg)
+
+</div>
+
+<div align="center">
+
+### 🚀 **Full Stack Freelancer** at [**Flabex**](https://www.flabex.com/en)
+*Crafting digital experiences that make a difference*
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.flabex.com/en)
+[![Freelancer](https://img.shields.io/badge/Freelancer-29B2FE?style=for-the-badge&logo=freelancer&logoColor=white)](https://www.flabex.com/en)
+
+</div>
+
+---
+
+## 🎯 **About Me**
+
+```javascript
+const erkan = {
+    pronouns: "He/Him",
+    location: "Istanbul, Turkey 🇹🇷",
+    company: "Flabex - Digital Solutions",
+    role: "Full Stack Developer & Founder",
+    languages: ["JavaScript", "Python", "PHP", "TypeScript"],
+    frameworks: ["React", "Node.js", "Laravel", "Vue.js"],
+    databases: ["MySQL", "MongoDB", "PostgreSQL"],
+    architecture: ["Microservices", "Event-Driven", "Serverless"],
+    currentFocus: "Building scalable web applications",
+    funFact: "I turn coffee into code ☕ → 💻"
+};
+```
+
+## 💼 **What I Do**
+
+<table>
+<tr>
+<td width="50%">
+
+### 🎨 Frontend Development
+- ⚡ Modern React & Vue.js applications
+- 🎭 Responsive UI/UX design
+- 📱 Progressive Web Apps (PWA)
+- 🌈 CSS animations & interactions
+
+</td>
+<td width="50%">
+
+### ⚙️ Backend Development
+- 🚀 Node.js & Express APIs
+- 🐘 PHP & Laravel frameworks
+- 🗄️ Database design & optimization
+- ☁️ Cloud services integration
+
+</td>
+</tr>
+</table>
+
+## 🛠️ **Tech Stack**
+
+<div align="center">
+
+### Languages
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+### Frameworks & Libraries
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vue.js](https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D)
+![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+### Databases & Cloud
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![Google Cloud](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)
+
+### Tools & Others
+![Git](https://img.shields.io/badge/Git-E34F26?style=for-the-badge&logo=git&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+
+</div>
+
+## 📊 **GitHub Stats**
+
+<div align="center">
+<table>
+<tr>
+<td width="50%">
+
+<img src="https://github-readme-stats.vercel.app/api?username=erkankolakan&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F5FF&icon_color=FF00FF&text_color=FFFFFF" />
+
+</td>
+<td width="50%">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=erkankolakan&theme=radical&hide_border=true&background=0D1117&stroke=00F5FF&ring=FF00FF&fire=FFBE0B&currStreakNum=FFFFFF&sideNums=FFFFFF&currStreakLabel=00F5FF&sideLabels=FF00FF&dates=FFFFFF" />
+
+</td>
+</tr>
+</table>
+
+<img width="100%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=erkankolakan&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F5FF&text_color=FFFFFF" />
+
+</div>
+
+## 🎖️ **Achievements & Highlights**
+
+<div align="center">
+
+![](https://github-profile-trophy.vercel.app/?username=erkankolakan&theme=radical&no-frame=true&no-bg=true&margin-w=4&row=1)
+
+</div>
+
+- 🏆 **5+ Years** of professional development experience
+- 🚀 **100+** successful projects delivered
+- 🌟 **Founder** of Flabex digital agency
+- ⚡ **Expert** in full-stack development
+- 🎯 **Specialized** in modern web technologies
+
+## 🤝 **Let's Connect!**
+
+<div align="center">
+
+### 📫 **Reach out to me:**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/erkan-kolakan-03138b1a3/)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:erkankolakan@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/erkankolakans)
+[![Portfolio](https://img.shields.io/badge/Portfolio-FF5722?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.flabex.com/en)
+
+### 💼 **Open for:**
+- 🚀 Freelance projects
+- 💡 Collaboration opportunities  
+- 🎯 Consulting services
+- 📈 Business partnerships
+
+</div>
+
+---
+
+## 🎨 **Latest Projects**
+
+<div align="center">
+
+| Project | Description | Tech Stack | Status |
+|---------|-------------|------------|---------|
+| 🌐 **Flabex Platform** | Full-stack business solution | React, Node.js, MongoDB | ✅ Live |
+| 📱 **E-Commerce App** | Modern shopping experience | Vue.js, Laravel, MySQL | 🚧 In Progress |
+| 🎯 **Portfolio Sites** | Custom client portfolios | React, PHP, PostgreSQL | ✅ Multiple Deployed |
+| 🔧 **API Solutions** | RESTful microservices | Node.js, Express, Docker | ✅ Production |
+
+</div>
+
+## 📈 **Activity Graph**
+
+<div align="center">
+
+[![Erkan's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=erkankolakan&theme=react-dark&hide_border=true&area=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+
+</div>
+
+## 💭 **Random Dev Quote**
+
+<div align="center">
+
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
+
+</div>
+
+---
+
+<div align="center">
+
+### ⭐ **"Code is like humor. When you have to explain it, it's bad."** ⭐
+
+**Made with ❤️ by [Erkan Kolakan](https://github.com/erkankolakan)**
+
+*Last updated: December 2024*
+
+[![Profile Views](https://komarev.com/ghpvc/?username=erkankolakan&label=Profile%20views&color=0e75b6&style=flat)](https://github.com/erkankolakan)
+
+</div>
+
+---
+
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=150&section=footer&text=Thanks%20for%20visiting!&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=75"/>
+</div>
