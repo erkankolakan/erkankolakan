@@ -1,112 +1,186 @@
+<!-- Hero Section with Animated Background -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Erkan%20Kolakan&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Full%20Stack%20Developer%20%26%20Digital%20Architect&descAlignY=51&descAlign=50"/>
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=200&section=header&text=Erkan%20Kolakan&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Full%20Stack%20Developer%20%7C%20Digital%20Innovator&descAlignY=55&descSize=18"/>
 </div>
+<!-- Dynamic Typing Animation -->
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&pause=1000&color=3DAEE9&background=00000000&center=true&vCenter=true&width=600&lines=Welcome+to+my+digital+universe+%F0%9F%8C%8C;Full+Stack+Developer+%F0%9F%9A%80;Building+extraordinary+experiences+%E2%9C%A8;Let's+create+something+amazing+%F0%9F%92%AB" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=24&pause=1000&color=667EEA&center=true&vCenter=true&width=500&lines=👋+Merhaba%2C+Ben+Erkan!;🚀+Full+Stack+Developer;🎨+UI%2FUX+Enthusiast;☕+Coffee+%2B+Code+%3D+❤️;🌟+Creating+Digital+Magic" alt="Typing Animation" />
 </div>
 <br/>
+<!-- Profile Views Counter -->
 <div align="center">
-🎯 About Me
-  <img align="right" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif"/>
-typescriptconst erkan = {
-  title: "Full Stack Developer",
+  <img src="https://komarev.com/ghpvc/?username=erkankolakan&label=Profile%20Ziyaretçi&color=667eea&style=flat-square&labelColor=1a1a1a" alt="Profile Views"/>
+</div>
+<br/>
+<!-- About Me Section -->
+<div align="center">
+🧑‍💻 Hakkımda
+<table>
+<tr>
+<td width="50%">
+📊 Kim Ben?
+javascriptconst erkan = {
+  role: "Full Stack Developer",
   company: "Flabex",
-  location: "Istanbul, Turkey 🇹🇷",
-  experience: "5+ years",
-  passion: ["Clean Code", "Innovation", "User Experience"],
-  currentFocus: "Building scalable web applications",
-  lifePhilosophy: "Code with passion, design with purpose"
-};
-  <br clear="right"/>
-</div>
-
-<div align="center">
-🚀 My Digital Kingdom
-  <a href="https://www.flabex.com/en" target="_blank">
-    <img src="https://img.shields.io/badge/🌐%20Flabex-Visit%20My%20Brand-FF6B6B?style=for-the-badge&labelColor=1a1a1a&color=FF6B6B&logoColor=white" alt="Flabex Website" height="40"/>
-  </a>
-<br/><br/>
-Where Innovation Meets Excellence
-  <img src="https://github-readme-stats.vercel.app/api?username=erkankolakan&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3DAEE9&icon_color=3DAEE9&text_color=C9D1D9" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=erkankolakan&theme=tokyonight&hide_border=true&background=0D1117&stroke=3DAEE9&ring=3DAEE9&fire=FF6B6B&currStreakLabel=3DAEE9" width="48%" />
-</div>
-
-<div align="center">
-💻 Tech Arsenal
-Frontend Mastery
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,vue,angular,tailwind,sass,bootstrap,figma&theme=dark" />
-Backend Excellence
-  <img src="https://skillicons.dev/icons?i=nodejs,python,php,java,express,fastapi,django,laravel,mongodb,mysql,postgresql,redis&theme=dark" />
-DevOps & Tools
-  <img src="https://skillicons.dev/icons?i=docker,kubernetes,aws,vercel,git,github,vscode,postman,linux,nginx&theme=dark" />
-</div>
-
-<div align="center">
-📊 GitHub Analytics
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=erkankolakan&theme=tokyo-night&hide_border=true&bg_color=0D1117&color=3DAEE9&line=3DAEE9&point=FF6B6B" width="100%"/>
-  <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=erkankolakan&layout=compact&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=3DAEE9&text_color=C9D1D9" />
-  </div>
-</div>
-
-<div align="center">
-🏆 Achievements & Trophies
-  <img src="https://github-profile-trophy.vercel.app/?username=erkankolakan&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=7" />
-</div>
-
-<div align="center">
-🌟 Featured Projects
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin: 20px 0;">
-  <!-- Project cards will be dynamically loaded -->
-  <a href="https://github.com/erkankolakan?tab=repositories">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=erkankolakan&repo=YOUR_REPO_NAME&theme=tokyonight&hide_border=true&bg_color=0D1117" />
-  </a>
-  </div>
-  <a href="https://github.com/erkankolakan?tab=repositories">
-    <img src="https://img.shields.io/badge/View%20All%20Projects-3DAEE9?style=for-the-badge&logo=github&logoColor=white" alt="View All Projects" height="40"/>
-  </a>
-</div>
-
-<div align="center">
-📬 Let's Connect & Collaborate
-  <div style="margin: 30px 0;">
-💬 Reach Out
-  <a href="https://www.linkedin.com/in/erkan-kolakan-03138b1a3/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20me-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=1a1a1a" height="45"/>
-  </a>
-  <a href="mailto:erkankolakan@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-Let's%20talk-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1a1a1a" height="45"/>
-  </a>
-  <a href="https://instagram.com/erkankolakans">
-    <img src="https://img.shields.io/badge/Instagram-Follow%20my%20journey-E4405F?style=for-the-badge&logo=instagram&logoColor=white&labelColor=1a1a1a" height="45"/>
-  </a>
-🤝 Let's Build Something Amazing Together
-  <img src="https://komarev.com/ghpvc/?username=erkankolakan&label=Profile%20Views&color=3DAEE9&style=for-the-badge" alt="Profile Views"/>
-  </div>
-</div>
-
-<div align="center">
-💝 Support My Work
-  <a href="https://www.buymeacoffee.com/erkankolakan" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="50"/>
-  </a>
-<br/><br/>
-⚡ Fun Fact
-javascriptconst funFact = () => {
-  const coffee = "☕";
-  const code = "👨‍💻";
-  const music = "🎵";
-  
-  return `${coffee} + ${code} + ${music} = Perfect productivity!`;
+  location: "İstanbul, Türkiye 🇹🇷",
+  languages: ["Turkish", "English"],
+  focus: "Modern Web Solutions",
+  motto: "Code Clean, Think Deep"
 };
 
-console.log(funFact()); // ☕ + 👨‍💻 + 🎵 = Perfect productivity!
-</div>
+console.log("Merhaba Dünya! 🌍");
+🎯 Uzmanlaştığım Alanlar
 
+🖥️ Frontend: React, Next.js, Vue.js
+⚙️ Backend: Node.js, Python, PHP
+🗄️ Database: MongoDB, PostgreSQL
+🎨 Design: Figma, Adobe XD
+
+</td>
+<td width="50%">
+📈 GitHub İstatistiklerim
+<img src="https://github-readme-stats.vercel.app/api?username=erkankolakan&show_icons=true&theme=gradient&bg_color=30,667eea,764ba2&title_color=ffffff&text_color=ffffff&icon_color=ffffff&border_color=ffffff&border_radius=15" width="100%" />
+<br/><br/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=erkankolakan&theme=radical&background=45,667eea,764ba2&stroke=ffffff&ring=ffffff&fire=ffffff&currStreakLabel=ffffff&border=ffffff&border_radius=15" width="100%" />
+</td>
+</tr>
+</table>
+</div>
+<!-- Skills Section -->
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer&animation=twinkling&fontColor=fff"/>
-Made with ❤️ and countless cups of coffee
-  <img src="https://img.shields.io/badge/Built%20with-Love%20%26%20Code-FF6B6B?style=for-the-badge&labelColor=1a1a1a&color=FF6B6B" />
-  <br/>
-<sub>✨ "Code is poetry written in logic" ✨</sub>
+🛠️ Teknoloji Arşenim
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px;">
+Frontend Teknolojileri
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" />
+<img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" />
+<img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+Backend & Database
+<img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" />
+<img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+<img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" />
+Tools & DevOps
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white" />
+<img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
+</div>
+</div>
+<!-- Activity Graph -->
+<div align="center">
+📊 GitHub Aktivite Grafik
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=erkankolakan&bg_color=0f0f23&color=7c7c7c&line=667eea&point=764ba2&area=true&hide_border=true&theme=react-dark" width="100%"/>
+</div>
+<!-- Languages Chart -->
+<div align="center">
+💻 En Çok Kullandığım Diller
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=erkankolakan&layout=compact&theme=gradient&bg_color=30,667eea,764ba2&title_color=ffffff&text_color=ffffff&border_color=ffffff&border_radius=15" />
+</div>
+<!-- Featured Projects Section -->
+<div align="center">
+🌟 Öne Çıkan Projelerim
+<!-- Repository kartları burada dinamik olarak yüklenecek -->
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+<!-- Proje kartları için placeholder -->
+<a href="https://github.com/erkankolakan?tab=repositories">
+  <img src="https://img.shields.io/badge/🚀%20Tüm%20Projelerimi%20Gör-667eea?style=for-the-badge&logoColor=white&labelColor=1a1a1a" height="50"/>
+</a>
+</div>
+</div>
+<!-- Company/Brand Section -->
+<div align="center">
+🏢 Şirketim: Flabex
+<a href="https://www.flabex.com/en" target="_blank">
+  <img src="https://img.shields.io/badge/🌐%20Flabex%20-%20Dijital%20Çözümler-FF6B6B?style=for-the-badge&labelColor=1a1a1a&color=FF6B6B&logoColor=white" height="60"/>
+</a>
+💡 Ne Yapıyoruz?
+Modern web uygulamaları ve dijital çözümler geliştiriyoruz
+
+✨ Özel Web Uygulamaları
+🎨 UI/UX Tasarım
+📱 Mobil Uygulamalar
+🛍️ E-ticaret Çözümleri
+
+</div>
+<!-- Trophies -->
+<div align="center">
+🏆 GitHub Rozetlerim
+<img src="https://github-profile-trophy.vercel.app/?username=erkankolakan&theme=radical&no-frame=true&no-bg=false&margin-w=4&row=1&column=8" />
+</div>
+<!-- Contact Section -->
+<div align="center">
+📞 İletişim
+💬 Benimle İletişime Geç
+<table>
+<tr>
+<td align="center">
+<a href="https://www.linkedin.com/in/erkan-kolakan-03138b1a3/">
+<img src="https://img.shields.io/badge/LinkedIn-Bağlantı%20Kur-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" height="40"/>
+<br/>
+<sub><b>Profesyonel Ağ</b></sub>
+</a>
+</td>
+<td align="center">
+<a href="mailto:erkankolakan@gmail.com">
+<img src="https://img.shields.io/badge/Gmail-Mail%20Gönder-D14836?style=for-the-badge&logo=gmail&logoColor=white" height="40"/>
+<br/>
+<sub><b>E-posta</b></sub>
+</a>
+</td>
+<td align="center">
+<a href="https://instagram.com/erkankolakans">
+<img src="https://img.shields.io/badge/Instagram-Takip%20Et-E4405F?style=for-the-badge&logo=instagram&logoColor=white" height="40"/>
+<br/>
+<sub><b>Sosyal Medya</b></sub>
+</a>
+</td>
+</tr>
+</table>
+🤝 İş Birliği Yapalım!
+<img src="https://img.shields.io/badge/📧%20erkankolakan@gmail.com-Projeler%20için%20iletişim-667eea?style=for-the-badge&logoColor=white&labelColor=1a1a1a" />
+</div>
+<!-- Fun Section -->
+<div align="center">
+⚡ Eğlenceli Bilgiler
+pythonclass Erkan:
+    def __init__(self):
+        self.coffee_cups_per_day = "∞"
+        self.favorite_music = "Lo-fi beats while coding"
+        self.coding_time = "Mostly nights 🌙"
+        self.superpower = "Turning coffee into code"
+    
+    def daily_routine(self):
+        return ["☕ Coffee", "💻 Code", "🎵 Music", "🔄 Repeat"]
+    
+    def dream_project(self):
+        return "Building the next big thing! 🚀"
+
+erkan = Erkan()
+print(f"Daily routine: {erkan.daily_routine()}")
+# Output: ['☕ Coffee', '💻 Code', '🎵 Music', '🔄 Repeat']
+🎯 2024 Hedeflerim
+
+🚀 10+ yeni proje tamamlamak
+📚 Machine Learning öğrenmek
+🌟 Open source katkıları artırmak
+🎨 Daha iyi UI/UX tasarımları
+
+</div>
+<!-- Support Section -->
+<div align="center">
+☕ Çalışmalarımı Destekle
+Eğer projelerimi beğendiysen, bir kahve ısmarlayabilirsin! 😊
+<a href="https://www.buymeacoffee.com/erkankolakan" target="_blank">
+<img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="60" />
+</a>
+</div>
+<!-- Footer -->
+<div align="center">
+
+💫 "Kod yazmak sanat, problem çözmek tutku!"
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:667eea,100:764ba2&height=120&section=footer&animation=fadeIn"/>
+<sub>✨ Bu profil ❤️ ve ☕ ile hazırlandı | Son güncelleme: 2024</sub>
 </div>
